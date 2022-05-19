@@ -13,4 +13,4 @@ There are two parts:
 For the comparative tests, we borrow the parallel patterns along with their
 implementations in C+OpenMP from the [Parallel Research Kernels](https://github.com/ParRes/Kernels)
 and define fixed problem sizes for each in order to use them as benchmarks for
-multithreading performance.
+comparing multithreading performance.

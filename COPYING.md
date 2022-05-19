@@ -1,6 +1,6 @@
 All files apart from those listed below use the MIT license.
 
-All files in `src/comparative/OpenMP/` use the following license:
+All source files in `src/comparative/OpenMP/` use the following license:
 
 /*
 Copyright (c) 2013, Intel Corporation

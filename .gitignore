@@ -9,6 +9,9 @@ reduce
 stencil
 transpose
 
+# Generated C code
+func.c
+
 # C objects
 *.o
 
