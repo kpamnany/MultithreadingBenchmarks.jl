@@ -56,6 +56,27 @@
 #
 # *******************************************************************
 
+const doc = """p2p.jl -- point-to-point synchronization efficiency
+Usage:
+    p2p.jl [--iterations=<K>] [--m=<M>] [--n=<N>] [--group=<G>]
+    p2p.jl -h | --help
+    p2p.jl --version
+Options:
+    -h --help           Show this screen.
+    --version           Show version.
+    --iterations=<K>    Number of iterations [default: 100].
+    --m=<M>             First array dimension [default: 1024].
+    --n=<N>             Second array dimension [default: 512].
+    --group=<G>         Group factor [default: 1].
+"""
+
+using Base.Threads
+using DocOpt
+
+include("common.jl")
+
+const args = docopt(doc, version = PRKVERSION)
+
 function iterate_over_grid!(grid, m, n)
     for j = 2:n
         for i = 2:m
@@ -142,5 +163,5 @@ function main()
     end
 end
 
-main()
+main(args)
 
