@@ -1,0 +1,5 @@
+[deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+DocOpt = "968ba79b-81e4-546f-ab3a-2eecfa62a9db"
+TracyProfiler_jll = "0c351ed6-8a68-550e-8b79-de6f926da83c"
+UnicodePlots = "b8865327-cd53-5732-bb35-84acbb429228"

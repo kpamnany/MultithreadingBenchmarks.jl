@@ -12,6 +12,7 @@ Options:
 
 using DocOpt
 using UnicodePlots
+using BenchmarkTools
 
 const args = docopt(doc, version = v"0.0.1")
 const JULIAVER = Base.julia_cmd()[1]
@@ -25,10 +26,10 @@ function run_benches(bench::String, args)
         threads = 2^n
         threads > max && break
         @show threads
-        for r in 1:runs
-            @show r
-            res = read(`$JULIAVER --project=. --threads=$threads $bench`)
-            run(`$JULIAVER --project=. --threads=$threads $bench`)
+        for run in 1:runs
+            @show run
+            result = read(`$JULIAVER --project --threads=$threads $bench`)
+            @show result
         end
         n += 1
     end
